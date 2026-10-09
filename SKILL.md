@@ -7,6 +7,8 @@ description: Check a draft before it reaches a person, and find where it shifts 
 
 Run this on a draft before a person has to read it — a message, document, summary, answer, or commit message.
 
+> **Unvalidated.** This check has not been run against a test set. The nine signatures below come from observed failures, not from measurement, and the severity order is a judgment. A quiet result from it is weak evidence, not clearance.
+
 ## The test
 
 One question decides everything here:
@@ -21,9 +23,11 @@ The cost is invisible to whoever produced it. That is why this runs as a separat
 
 Go through these in order. The first three cost people real time; the rest are padding.
 
-**1. Unverified specifics.** A number, name, version, path, link, command, or quote stated with confidence that was never checked. This is the worst kind, because it looks most like substance and the reader only finds out when it fails. Flag every factual specific whose source you cannot point to. Verify it, attribute it, or mark it as an assumption.
+**1. Unverified specifics.** A number, name, version, path, link, command, or quote stated with confidence. This is the worst kind, because it looks most like substance and the reader only finds out when it fails.
 
-**2. Untested instructions.** Commands, code, or steps presented as working that were never run. Shipping a command you have not executed is a claim you did not earn. Run it, or say plainly that it is untested.
+You are flagging candidates, not certifying facts. You cannot see what the author checked, so do not try to judge it — list every factual specific whose source is not visible in the draft itself, and for each say: verify, attribute, or mark as an assumption. Where you have tools, verify the pivotal ones and name which you verified. Where you do not, say so. Never let silence imply the specifics are sound.
+
+**2. Untested instructions.** Commands, code, or steps presented as working. Shipping a command you have not executed is a claim you did not earn. You cannot tell from the text whether it was run, so treat every one as unrun unless the draft says otherwise: run it, or have the draft say plainly that it is untested.
 
 **3. Answer not given.** The question was yes or no and the reply is a discussion. Or the recommendation is "it depends" without naming what it depends on. Put the direct answer in the first sentence. If there genuinely isn't one, say what is missing and what would settle it.
 
@@ -56,7 +60,9 @@ Report only what you found, hit by hit:
 
 Then one line on what to do before sending.
 
-Do not open with an assessment of the draft's overall quality. Do not list the checks that passed. Do not praise the parts that were fine. A clean draft gets one sentence saying so.
+Do not open with an assessment of the draft's overall quality. Do not list the checks that passed. Do not praise the parts that were fine.
+
+A clean draft gets one sentence saying so — followed by one naming what this pass could not check: which specifics you had no way to verify, and which commands you could not run. A report that stays silent about its own limits commits item 1 itself, and a reader who takes that silence for clearance is worse off than with no check at all.
 
 If the draft is long, name the single cut that removes the most reader-time for the least loss, and be specific about it — "the three paragraphs under X repeat the table above."
 

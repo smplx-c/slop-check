@@ -36,6 +36,10 @@ Nine signatures, ordered by damage:
 
 The first two are first for a reason. An unverified fact or an untested command does not waste time, it sends the reader somewhere wrong — and it is the hardest kind to spot, because confident specifics are what substance looks like.
 
+They are also the two the check cannot settle on its own. It can see that a draft asserts a version number; it cannot see whether the author looked it up. So items 1 and 2 flag candidates rather than certify facts, and a quiet report has to say what it had no way to check. A gate that can silently certify what it cannot inspect is worse than no gate, because the reader stops looking.
+
+**This check has not been run against a test set.** The nine signatures come from observed failures, not measurement, and the severity order is a judgment. Treat a clean result as weak evidence.
+
 ## What it doesn't do
 
 It will not stop a model producing slop by default. Skills load when invoked, and whoever is producing slop is not invoking the slop check. This is a gate you run on a draft, not a personality. Default behaviour belongs in `CLAUDE.md` or your output settings.
